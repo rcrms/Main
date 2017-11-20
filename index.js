@@ -42,7 +42,9 @@
         preObj3.innerText = JSON.stringify(snap.val(), null, 3)
     });
 
+
     const dbRef4 = firebase.database().ref().child('Live');
+
     dbRef4.on('value', snap => 
     {
         preObj4.innerText = JSON.stringify(snap.val(), null, 3)

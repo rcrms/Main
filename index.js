@@ -16,7 +16,7 @@
     const preObj1 = document.getElementById('-KyrHAbOfuk33ktFW2nS');
     const preObj2 = document.getElementById('-KyrK6Ipx8asCpGjYJBl');
     const preObj3 = document.getElementById('-KyrK6LSsSSaUoL95Ii8');
-    const preObj4 = document.getElementById('-KyrK6Qj_2X59kaml5');
+    const preObj4 = document.getElementById('Live');
     //creating database reference
     const dbRef = firebase.database().ref().child('-KyrG2O0FdzuXq10Es53');
     dbRef.on('value', snap => 
@@ -42,7 +42,9 @@
         preObj3.innerText = JSON.stringify(snap.val(), null, 3)
     });
 
-    const dbRef4 = firebase.database().ref().child('-KyrK6Qj_2X59kaml5-4');
+
+    const dbRef4 = firebase.database().ref().child('Live');
+
     dbRef4.on('value', snap => 
     {
         preObj4.innerText = JSON.stringify(snap.val(), null, 3)
